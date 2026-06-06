@@ -90,7 +90,7 @@ jobs:
         id: build
         uses: docker/build-push-action@v7
         with:
-          # context: spring-github-actions-backend
+          context: spring-github-actions-backend
           push: true
           tags: |
             ${{ steps.meta.outputs.tags }}
