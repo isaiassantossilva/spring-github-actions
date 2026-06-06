@@ -78,7 +78,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           # images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          images: ${{ env.IMAGE_NAME }}
+          images: ${{ secrets.CONTAINER_REGISTRY_USERNAME }}/${{ env.IMAGE_NAME }}
           tags: |
             type=ref,event=branch
             type=semver,pattern={{version}}
